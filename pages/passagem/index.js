@@ -5,6 +5,7 @@ import { Table } from 'react-bootstrap'
 import { set } from 'react-hook-form'
 import { BsTrash, BsFillPlusCircleFill } from 'react-icons/bs'
 import { HiPencil } from 'react-icons/hi'
+import { MdAirplaneTicket } from 'react-icons/md'
 
 
 const index = () => {
@@ -30,21 +31,30 @@ const index = () => {
 
   return (
     <>
-      <Pagina titulo='Passagem'>
+      <Pagina titulo='Passagem' typeNavBar="usuario">
 
-        <Link href='/passagem/form' style={{background:'#4300d2', color:'white'}}className='mb-2 btn '>
+        <Link href='/passagem/form' style={{ background: '#4300d2', color: 'white' }} className='mb-2 btn '>
           <BsFillPlusCircleFill className='me-2' />
           Novo
         </Link>
 
-        <Table variant='dark'striped bordered hover>
+        <Table variant='dark' striped bordered hover>
           <thead>
-            <tr style={{color: '#9400D3'}}>
+            <tr style={{ color: '#9400D3' }}>
               <th>Opções</th>
               <th>Nome</th>
-              <th>Local de Origem</th>
-              <th>Local de Destino</th>
-              <th>Assento</th>
+              <th>Orgm</th>
+              <th>sgl orgm</th>
+              <th>Dstno</th>
+              <th>sgl dstno</th>
+              <th>Cmpnhia aer</th>
+              <th>id_voo</th>
+              <th>clss</th>
+              <th>H embarque</th>
+              <th>H chegada</th>
+              <th>pt</th>
+              <th>dt</th>
+              <th>assento</th>
             </tr>
           </thead>
           <tbody>
@@ -56,10 +66,22 @@ const index = () => {
                   </Link>
                   {''}
                   <BsTrash title='excluir' onClick={() => excluir(i)} className='text-info' />
+                  <Link href={'/ticket/' + i}>
+                    <MdAirplaneTicket title='ticket' className='text-warning' />
+                  </Link>
                 </td>
-                <td>{item.nome}</td>
+                <td>{item.nome2}</td>
                 <td>{item.origem}</td>
+                <td>{item.sigla_origem}</td>
                 <td>{item.destino}</td>
+                <td>{item.sigla_destino}</td>
+                <td>{item.companhia_aerea}</td>
+                <td>{item.nome_id}</td>
+                <td>{item.nome}</td>
+                <td>{item.horario_embarque}</td>
+                <td>{item.horario_chegada}</td>
+                <td>{item.portao}</td>
+                <td>{item.data}</td>
                 <td>{item.assento}</td>
               </tr>
             ))}

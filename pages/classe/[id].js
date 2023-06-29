@@ -46,7 +46,7 @@ const form = () => {
 
     return (
         <>
-            <Pagina titulo='Classe'>
+            <Pagina titulo='Classe' typeNavBar="adm">
                 <Form>
                     <Form.Group className="mb-3" controlId="nome">
                         <Form.Label>Nome:</Form.Label>
@@ -73,7 +73,7 @@ const form = () => {
                     <Form.Label>Bagagem:</Form.Label>
                         <Form.Control isInvalid={errors.bagagem} type="text" {...register('bagagem', classeValidator.bagagem)} />
                         {
-                            errors.valor &&
+                            errors.bagagem &&
                             <small className='text-danger'>{errors.bagagem.message}</small>
                         }
                     </Form.Group>

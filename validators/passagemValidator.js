@@ -1,5 +1,5 @@
 const passagemValidator = {
-    nome: {
+    nome2: {
         required: 'Campo Obrigatório',
     },
 

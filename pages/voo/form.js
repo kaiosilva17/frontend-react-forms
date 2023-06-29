@@ -43,7 +43,7 @@ const form = () => {
 
     return (
         <>
-           <Pagina titulo='Voo'>
+           <Pagina titulo='Voo' typeNavBar="adm">
                 <Form>
                     <Form.Group className="mb-3" controlId="companhia_aerea">
                         <Form.Label>Companhia:</Form.Label>

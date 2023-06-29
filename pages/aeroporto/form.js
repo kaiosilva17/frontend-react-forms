@@ -32,7 +32,7 @@ const form = () => {
 
     return (
         <>
-            <Pagina titulo='aeroporto'>
+            <Pagina titulo='aeroporto' typeNavBar="adm">
                 <Form>
                     <Form.Group className="mb-3" controlId="nome">
                         <Form.Label>Nome:</Form.Label>

@@ -31,7 +31,7 @@ const form = () => {
 
     return (
         <>
-            <Pagina titulo='Aeronave'>
+            <Pagina titulo='Aeronave' typeNavBar="adm">
                 <Form>
                     <Form.Group className="mb-3" controlId="nome">
                         <Form.Label>Nome:</Form.Label>

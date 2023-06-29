@@ -30,7 +30,7 @@ const index = () => {
 
   return (
     <>
-      <Pagina titulo='Aeroporto'>
+      <Pagina titulo='Aeroporto' typeNavBar="adm">
 
         <Link href='/aeroporto/form' style={{background:'#4300d2', color:'white'}}className='mb-2 btn '>
           <BsFillPlusCircleFill className='me-2' />
